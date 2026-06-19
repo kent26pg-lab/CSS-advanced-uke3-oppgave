@@ -20,13 +20,37 @@ body {
   text-align: center;
 }
 
+.animated-h1 {
+  display: inline-block;
+  animation: headerpulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes headerpulse {
+  0% {
+    opacity: 0.3;
+    transform: translateY(-5px) scale(0.95);
+    color: #ffffff;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(5px) scale(1.05);
+    color: #1abc9c;
+  }
+  100% {
+    opacity: 0.9;
+    transform: translateY(-5px) scale(0.95);
+    color: #ffffff;
+  }
+}
+
 .nav-link {
   color: #1abc9c;
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
   font-size: 1.1rem;
-  transition: color 3s ease;
+  transition: color 0.5s ease;
 }
 
 .nav-link:hover {
@@ -39,48 +63,51 @@ body {
   justify-content: center;
   align-items: center;
 }
-.card { 
-background: #fff;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-text-align: center;
-max-width: 800px;
-width: 100%;
- }
+.card {
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
 
 .image-container {
   margin: 20px;
   overflow: hidden;
-  border-radius: 8px;
 }
 
 .image {
+  border-radius: 10px;
   width: 300px;
   height: 400px;
   transition: transform 3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .image:hover {
-  transform: scale(1.2) rotate(20deg);
+  transform: scale(1.1) rotate(10deg);
 }
 
 .interactive-btn {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 20px 25px;
-    font-size: 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease, transform 1s ease, box-shadow 1s ease;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 20px 25px;
+  font-size: 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition:
+    background-color 0.3s ease,
+    transform 1s ease,
+    box-shadow 1s ease;
 }
-     
+
 .interactive-btn:hover {
-    background-color: #2980b9;
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+  background-color: #2980b9;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
 }
 
 .site-footer {
